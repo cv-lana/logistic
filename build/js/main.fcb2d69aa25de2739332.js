@@ -1,0 +1,1 @@
+!function(){"use strict";var e=document.getElementById("temperatureRegime"),t=document.querySelector(".form__item-content--hidden");e.addEventListener("click",(function(){e.checked?t.style.display="flex":t.style.display="none"}))}();

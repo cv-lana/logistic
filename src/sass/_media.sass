@@ -1,0 +1,43 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+
+@media (max-width: 992px)
+  .container
+    max-width: 760px
+    width: 92%
+  .calculator
+    &__title
+      font-size: 44px
+      line-height: 45px
+    &__desc
+      max-width: 300px
+
+@media (max-width: 768px)
+  .container
+    max-width: 560px
+  .calculator
+    &__wrapper
+      flex-direction: column
+      gap: 0
+    &__desc
+      max-width: 100%
+      margin-bottom: 37px
+
+@media (max-width: 576px)
+  .container
+    width: 87%
+  .calculator
+    &__title
+      font-size: 40px
+      line-height: 40px
+      margin-bottom: 22px
+  .form
+    &__title
+      font-size: 20px
+      line-height: 24px
+
+@media (min-width: 320px) and (max-width: 480px)
+  .calculator
+    &__title
+      font-size: 32px

@@ -1,0 +1,116 @@
+.calculator
+  &__title
+    font-family: 'Roboto', sans-serif
+    font-weight: 700
+    font-size: 56px
+    line-height: 68px
+    padding-top: 40px
+    margin-bottom: 20px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    gap: 16px
+  &__desc
+    max-width: 356px
+    min-height: 102px
+    height: 100%
+    padding: 24px
+    background-color: $lightGrey
+.form
+  max-width: 728px
+  width: 100%
+  &__item
+    margin-bottom: 40px
+    &-title
+      display: flex
+      align-items: center
+      margin-bottom: 16px
+    &-content
+      display: grid
+      grid-template-columns: 1fr 1fr
+      column-gap: 12px
+      max-width: 356px
+      width: 100%
+      &--hidden
+        display: none
+  &__step
+    padding: 2px 7px
+    margin-right: 8px
+    font-size: 16px
+    line-height: 18px
+    background-color: $red
+    border: 1px solid $red
+    border-radius: 50%
+  &__title
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+  &__wrapper
+    display: grid
+    grid-template-rows: 1fr 44px
+  &__cargoType
+    max-width: 356px
+    margin-bottom: 16px
+  &__checkboxTemperature
+    margin: 16px 0
+    display: flex
+    align-items: center
+    &-input
+      flex-basis: 4%
+      width: 24px
+      height: 24px
+      margin-right: 12px
+      margin-bottom: 0 !important
+      cursor: pointer
+    &-label
+      margin-bottom: 0
+  &__input
+    &-wrapper
+      position: relative
+    &-address
+      position: relative
+      padding-left: 36px
+      padding-right: 140px
+      margin-bottom: 4px !important
+      background-color: $darkGrey
+      &--active
+        color: $white
+    &-icon
+      position: absolute
+      top: 14px
+      left: 12px
+      width: 16px
+      height: 16px
+      background-image: url('../img/icon-disabled.svg')
+      &--active
+        background-image: url('../img/icon-active.svg')
+    &-text
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 119px
+      height: 24px
+      padding-top: 3px
+      background-color: $lightGrey
+      border: 1px solid $lightGrey
+      border-radius: 2px
+      text-align: center
+      opacity: 0.3
+      &--active
+        opacity: 1
+  &__distance
+    position: absolute
+    top: -23px
+    right: 10px
+    font-size: 13px
+    line-height: 16px
+    color: #cfcfcf
+  &__commentTitle
+    margin-top: 16px
+  &__commentText
+    width: 100%
+    min-height: 80px
+    padding: 13px 14px
+    border: none
+    outline: none
+    resize: none

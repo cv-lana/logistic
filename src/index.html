@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расчет стоимости перевозки грузов</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+  <section class="calculator">
+    <div class="container">
+      <h2 class="calculator__title">FTL: Прямая машина</h2>
+      <div class="calculator__wrapper">
+        <form action="#" class="form calculator-form">
+          <ul class="form__list">
+            <li class="form__item">
+              <div class="form__item-title">
+                <span class="form__step">1</span>
+                <h3 class="form__title">Маршрут</h3>
+              </div>
+              <label for="departurePoint">Откуда</label>
+              <input type="text" name="departurePoint" id="departurePoint">
+              <label for="arrivalPoint">Куда</label>
+              <input type="text" name="arrivalPoint" id="arrivalPoint">
+            </li>
+            <li class="form__item">
+              <div class="form__item-title">
+                <span class="form__step">2</span>
+                <h3 class="form__title">Транспорт</h3>
+              </div>
+              <div class="form__item-content">
+                <div class="form__wrapper">
+                  <label for="truckCapacity">Грузоподъёмность</label>
+                  <select name="truckCapacity" id="truckCapacity">
+                    <option>Не выбрана</option>
+                    <option value="truckCapacity-1">Вариант 1</option>
+                    <option value="truckCapacity-2">Вариант 2</option>
+                    <option value="truckCapacity-3">Вариант 3</option>
+                    <option value="truckCapacity-3">Вариант 4</option>
+                    <option value="truckCapacity-3">Вариант 5</option>
+                  </select>
+                </div>
+                <div class="form__wrapper">
+                  <label for="loadingMethod">Способ погрузки</label>
+                  <select name="loadingMethod" id="loadingMethod">
+                    <option value="loadingMethod-1">Задняя</option>
+                    <option value="loadingMethod-2">Верхняя</option>
+                    <option value="loadingMethod-3">Боковая</option>
+                  </select>
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <div class="form__item-title">
+                <span class="form__step">3</span>
+                <h3 class="form__title">Груз</h3>
+              </div>
+              <label for="cargoType">Тип груза</label>
+              <select class="form__cargoType" name="cargoType" id="cargoType">
+                <option>Не выбран</option>
+                <option value="cargoType-1">Мебель</option>
+                <option value="cargoType-2">Личные вещи</option>
+              </select>
+              <div class="form__item-content">
+                <div class="form__wrapper">
+                  <label for="hazardClasses">Класс опасности</label>
+                  <select name="hazardClasses" id="hazardClasses">
+                    <option>Не выбран</option>
+                    <option value="hazardClasses-1">Класс 1 — Взрывчатые материалы</option>
+                    <option value="hazardClasses-2">Класс 2 — Газы</option>
+                    <option value="hazardClasses-2">Класс 3 — Легковоспламеняющиеся жидкости</option>
+                    <option value="hazardClasses-2">Класс 4 — Легковоспламеняющиеся вещества и материалы</option>
+                    <option value="hazardClasses-2">Класс 5 — Окисляющие вещества и органические пероксиды</option>
+                  </select>
+                </div>
+                <div class="form__wrapper">
+                  <label for="insuranceCost">Объявленная ценность, ₽</label>
+                  <input type="number" name="insuranceCost" id="insuranceCost" placeholder="≥ 1">
+                </div>
+              </div>
+              <div class="form__checkboxTemperature">
+                <input class="form__checkboxTemperature-input" type="checkbox" name="temperatureRegime"
+                  id="temperatureRegime">
+                <label class="form__checkboxTemperature-label" for="temperatureRegime">
+                  Требуется температурный режим
+                </label>
+              </div>
+              <div class="form__item-content form__item-content--hidden">
+                <div class="form__wrapper">
+                  <label for="temperatureMin">От, °C</label>
+                  <input type="number" name="temperatureMin" id="temperatureMin">
+                </div>
+                <div class="form__wrapper">
+                  <label for="temperatureMax">До, °C</label>
+                  <input type="number" name="temperatureMax" id="temperatureMax">
+                </div>
+              </div>
+            </li>
+            <li class="form__item">
+              <div class="form__item-title">
+                <span class="form__step">4</span>
+                <h3 class="form__title">Время</h3>
+              </div>
+              <label>Когда прибыть на точку</label>
+              <div class="form__input-wrapper form__input-wrapper--active">
+                <input class="form__input-address form__input-address--active" type="text"
+                  placeholder="Адрес не указан">
+                <div class="form__input-icon form__input-icon--active"></div>
+                <span class="form__input-text form__input-text--active">НЕ ВЫБРАНО</span>
+                <span class="form__distance">700 км в день</span>
+              </div>
+              <div class="form__input-wrapper">
+                <input class="form__input-address" type="text" placeholder="Адрес не указан">
+                <div class="form__input-icon"></div>
+                <span class="form__input-text">НЕ ВЫБРАНО</span>
+              </div>
+              <label class="form__commentTitle">Комментарий к заказу</label>
+              <textarea class="form__commentText"
+                placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"
+                name="comment"></textarea>
+            </li>
+          </ul>
+        </form>
+        <p class="calculator__desc">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <script src="index.js"></script> -->
+</body>
+
+</html>
